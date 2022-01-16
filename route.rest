@@ -1,1 +1,4 @@
 GET http://localhost:3000/quotes
+
+###
+GET http://localhost:3000/quotes/15
