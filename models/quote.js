@@ -1,11 +1,6 @@
 const mongoose = require('mongoose');
 
-// id: number, author, category, title, image, used: boolean, created at
 const quoteSchema = new mongoose.Schema({
-    id: {
-        type: Number,
-        required: true
-    },
     author: {
         type: String,
         required: true
@@ -33,4 +28,4 @@ const quoteSchema = new mongoose.Schema({
     }
 });
 
-modules.exports = mongoose.model('Quote', quoteSchema);
+module.exports = mongoose.model('Quote', quoteSchema);

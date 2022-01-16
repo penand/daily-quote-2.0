@@ -2,3 +2,15 @@ GET http://localhost:3000/quotes
 
 ###
 GET http://localhost:3000/quotes/15
+
+###
+POST http://localhost:3000/quotes
+Content-Type: application/json
+
+{
+    "author": "Dolly Parton",
+    "category": "motivation",
+    "title": "The way I see it, if you want the rainbow, you gotta put up with the rain.",
+    "image_url": "https://cdn.pixabay.com/photo/2019/03/11/00/15/rainbow-4047523_960_720.jpg",
+    "used": false
+}
