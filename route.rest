@@ -1,7 +1,7 @@
 GET http://localhost:3000/quotes
 
 ###
-GET http://localhost:3000/quotes/61e478cc9b7d80582e8fd45b
+GET http://localhost:3000/quotes/61e47b293a8a138429700a8e
 
 ###
 POST http://localhost:3000/quotes
@@ -14,3 +14,6 @@ Content-Type: application/json
     "image_url": "https://cdn.pixabay.com/photo/2019/03/11/00/15/rainbow-4047523_960_720.jpg",
     "used": false
 }
+
+###
+DELETE http://localhost:3000/quotes/61e478cc9b7d80582e8fd45b

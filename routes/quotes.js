@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 
 // Getting one
 router.get('/:id', getQuote, (req, res) => {
-    res.send(res.quote.author);
+    res.json(res.quote);
 });
 
 // Creating
@@ -36,13 +36,18 @@ router.post('/', async (req, res) => {
 });
 
 // Updating
-router.patch('/:id', (req, res) => {
-    // req.params.id
+router.patch('/:id', getQuote, (req, res) => {
+
 });
 
 // Deleting
-router.delete('/:id', (req, res) => {
-    // req.params.id
+router.delete('/:id', getQuote, async (req, res) => {
+    try {
+        await res.quote.remove();
+        res.json({ message: 'Deleted quote' });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
 });
 
 
