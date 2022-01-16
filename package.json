@@ -1,0 +1,27 @@
+{
+  "name": "daily-quote-2.0",
+  "version": "1.0.0",
+  "description": "Daily quote 2.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penand/daily-quote-2.0.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/penand/daily-quote-2.0/issues"
+  },
+  "homepage": "https://github.com/penand/daily-quote-2.0#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mongoose": "^6.1.6"
+  },
+  "devDependencies": {
+    "dotenv": "^12.0.4",
+    "nodemon": "^2.0.15"
+  }
+}
