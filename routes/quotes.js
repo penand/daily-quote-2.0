@@ -13,9 +13,8 @@ router.get('/', async (req, res) => {
 });
 
 // Getting one
-router.get('/:id', (req, res) => {
-    // req.params.id
-    res.send(req.params.id);
+router.get('/:id', getQuote, (req, res) => {
+    res.send(res.quote.author);
 });
 
 // Creating
@@ -46,5 +45,20 @@ router.delete('/:id', (req, res) => {
     // req.params.id
 });
 
+
+async function getQuote(req, res, next) {
+    let quote;
+    try {
+        quote = await Quote.findById(req.params.id);
+        if (quote === null){
+            return res.status(404).json({ message: "Cannot find quote" });
+        }
+    } catch (err) {
+        return res.status(500).json({ message: err.message });
+    }
+
+    res.quote = quote;
+    next();
+}
 
 module.exports = router;

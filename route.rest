@@ -1,7 +1,7 @@
 GET http://localhost:3000/quotes
 
 ###
-GET http://localhost:3000/quotes/15
+GET http://localhost:3000/quotes/61e478cc9b7d80582e8fd45b
 
 ###
 POST http://localhost:3000/quotes
