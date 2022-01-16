@@ -36,8 +36,29 @@ router.post('/', async (req, res) => {
 });
 
 // Updating
-router.patch('/:id', getQuote, (req, res) => {
+router.patch('/:id', getQuote, async (req, res) => {
+    if (req.body.author != null){
+        res.quote.author = req.body.author
+    };
+    if (req.body.category != null){
+        res.quote.category = req.body.category
+    };
+    if (req.body.title != null){
+        res.quote.title = req.body.title
+    };
+    if (req.body.image_url != null){
+        res.quote.image_url = req.body.image_url
+    };
+    if (req.body.used != null){
+        res.quote.used = req.body.used
+    };
 
+    try {
+        const updatedQuote = await res.quote.save();
+        res.json(updatedQuote);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
+    }
 });
 
 // Deleting
