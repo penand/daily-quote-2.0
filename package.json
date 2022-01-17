@@ -4,7 +4,7 @@
   "description": "Daily quote 2.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
