@@ -6,6 +6,9 @@
   "scripts": {
     "start": "node server.js"
   },
+  "engines": {
+    "node": "16.13.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/penand/daily-quote-2.0.git"
