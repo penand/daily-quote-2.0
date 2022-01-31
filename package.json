@@ -20,9 +20,10 @@
   },
   "homepage": "https://github.com/penand/daily-quote-2.0#readme",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^12.0.4",
     "express": "^4.17.2",
     "mongoose": "^6.1.6",
-    "dotenv": "^12.0.4",
     "nodemon": "^2.0.15"
   }
 }
